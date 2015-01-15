@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Homework 2</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href='http://fonts.googleapis.com/css?family=Kelly+Slab' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div class="menu">
+		<ul class="menuItems">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="registration.html">Registration</a></li>
+			<li><a href="feedback.html">Feedback</a></li>
+			<li><a href="faq.html">FAQ</a></li>
+		</ul>
+	</div>
+	<form name="Calc">
+		<div class="container">
+			<div class="display">
+				<input class="displayTxt" type="text" name="Input" maxlength="16">
+			</div>
+			<div class="buttonContainer">
+				<div class="row">
+					<div class="col-6">
+						<button class="calcBtn" value="">CE</button>
+					</div>
+					<div class="col-3 empty"></div>
+					<div class="col-3"><input class="calcBtn" type="button" value="%"></div>
+				</div>
+				<div class="row">
+					<div class="col-3"><input class="calcBtn" type="button" value="7"></div>
+					<div class="col-3"><input class="calcBtn" type="button" value="8"></div>
+					<div class="col-3"><input class="calcBtn" type="button" value="9"></div>
+					<div class="col-3"><input class="calcBtn" type="button" value="/"></div>
+				</div>
+				<div class="row">
+					<div class="col-3"><input class="calcBtn" type="button" value="4"></div>
+					<div class="col-3"><input class="calcBtn" type="button" value="5"></div>
+					<div class="col-3"><input class="calcBtn" type="button" value="6"></div>
+					<div class="col-3"><input class="calcBtn" type="button" value="*"></div>
+				</div>
+				<div class="row">
+					<div class="col-3"><input class="calcBtn" type="button" value="1">1</div>
+					<div class="col-3"><input class="calcBtn" type="button" value="2">2</div>
+					<div class="col-3"><input class="calcBtn" type="button" value="3">3</div>
+					<div class="col-3"><input class="calcBtn" type="button" value="-">-</div>
+				</div>
+				<div class="row">
+					<div class="col-3"><input class="calcBtn" type="button" value="0"></div>
+					<div class="col-3"><input class="calcBtn" type="button" value="."></div>
+					<div class="col-3"><input id="equals" class="calcBtn" type="button" value="="></div>
+					<div class="col-3"><input class="calcBtn" type="button" value="+"></div>
+				</div>
+			</div>
+		</div>
+	</form>
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>

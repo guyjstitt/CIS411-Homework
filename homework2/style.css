@@ -1,0 +1,129 @@
+/* Global CSS */
+
+.col-3 {
+	width: 25%;
+}
+
+.col-4 {
+	width: 33%;
+}
+
+.col-6 {
+	width: 50%;
+}
+
+.col-12 {
+	width: 100%;
+}
+
+/* Home CSS */
+
+.menu {
+	margin: 0 auto;
+	text-align: center;
+}
+
+ul.menuItems {
+	list-style: none;
+	padding: 0;
+}
+
+.menu ul li {
+	margin-left: 5px;
+	display: inline-block;
+}
+
+.container {
+	margin-top: 40px;
+	margin: 0 auto;
+	width: 290px;
+	height: 385px;
+	background: url("texture.jpg");
+	background-position: center;
+	border-radius: 10px;
+}
+
+.display {
+	position: relative;
+	width: 245px;
+	height: 60px;
+	top: 20px;
+	margin: 0 auto;
+	background-color: white;
+	margin-bottom: 30px;
+}
+
+.buttonContainer {
+	position: relative;
+	margin: 50px auto;
+	width: 250px;
+	height: 175px;
+}
+
+.buttonContainer .col-6 {
+	float: left;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	position: relative;	
+	height: 50px;
+	background-color: gray;
+	box-sizing: border-box;
+	border: 1px solid black;
+}
+
+.buttonContainer .col-3 {
+	float: left;
+	display: inline-block;
+	position: relative;
+	height: 50px;
+	background-color: gray;
+	box-sizing: border-box;
+	border: 1px solid black;
+}
+
+.calcBtn {
+	width: 100%;
+	height: 100%;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#666666), to(#636363), color-stop(.4,#616161),color-stop(.6,#737373)) !important; 
+	font-size: 1.9em;
+	font-family: 'Kelly Slab', serif;
+	text-shadow: 2px 2px #000;
+	color: lightgray;
+	border: 0;
+}
+
+.displayTxt {
+	text-align: right;
+	width: 100%;
+	height: 100%;
+	background-color: lightgray;
+	font-size: 2em;
+	font-family: 'Kelly Slab', serif;
+}
+
+.buttonContainer .col-3.empty {
+	background-color: transparent;
+	border-top: 0;
+}
+
+/* Feedback Form CSS */
+
+.fbContainer {
+	width: 500px;
+	margin: 0 auto;
+}
+
+.col-12 textarea {
+	width: 100%;
+}
+
+#email {
+	margin: 5px;
+}
+
+#comment {
+	margin: 5px;
+}
+
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Homework 2</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="menu">
+		<ul class="menuItems">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="registration.html">Registration</a></li>
+			<li><a href="feedback.html">Feedback</a></li>
+			<li><a href="faq.html">FAQ</a></li>
+		</ul>
+	</div>
+	<div class='fbContainer'>
+		<form name="Feedback">
+			<div class="row">
+				<div class="col-4">
+					<input id='email' name='email' type="text" placeholder='Email address'>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<textarea id='comment' rows='10' col='25' placeholder='Leave a comment'></textarea>
+				</div>
+			</div>
+			<input type='submit' value='submit' onclick="validateData()">
+		</form>
+	</div>
+	<script type="text/javascript" src="feedback.js"></script>
+</body>
+</html>
