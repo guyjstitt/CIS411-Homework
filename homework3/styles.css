@@ -1,0 +1,37 @@
+.menu {
+	margin: 0 auto;
+	text-align: center;
+}
+
+ul.menuItems {
+	list-style: none;
+	padding: 0;
+}
+
+.menu ul li {
+	margin-left: 5px;
+	display: inline-block;
+}
+
+.container {
+	margin: 0 auto;
+	width: 600px;
+	height: 600px;
+}
+
+.col-4 {
+	width: 33%;
+	float: left;
+	box-sizing: border-box;
+}
+
+.tile {
+	height: 200px;
+	width: 100%;
+	border: 1px solid black;
+}
+
+input[type='text'] {
+	font-size: 10em;
+	text-align: center;
+}
