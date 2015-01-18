@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+	<body>
+		<div class="menu">
+			<ul class="menuItems">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="registration.html">Registration</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="faq.html">FAQ</a></li>
+			</ul>
+		</div>
+		<div class="contactContainer col-4">
+			<form id="contactForm">
+				<div class="row">
+					<div class='col-4'>
+						<label for="name">Name:</label>
+						<input id="name" class="contactInput" type="text" required>
+					</div> 
+				</div>
+				<div class="row">
+					<div class='col-4'>
+						<label for="comment">Comment</label>
+						<input id="comment" class="contactInput" type="text" name="comment" required>
+					</div>
+				</div>
+				<div class="row">
+					<div class='col-4'>
+						<label for="email">Email:</label>
+						<input id="email" class="contactInput" type="email" name="email" required>
+					</div>
+				</div>
+				<div class="row"><input type="submit" value="Submit"></div>
+			</form>
+		</div>
+		<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="jquery.validate.js"></script>
+		<script type="text/javascript" src="contact.js"></script>
+	</body>
+</html>

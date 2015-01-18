@@ -1,23 +1,22 @@
-// Function to determine the player
 var tiles = document.querySelectorAll('.tile');
 
 var playerX = 'X';
-var playerY = 'O';
+var playerO = 'O';
 var trackTurn = 0;
 
 for(var i = 0; i < tiles.length; i++) {
 	tiles[i].addEventListener('click', function(){
 		$(this).attr('disabled','disabled');
 		if(trackTurn % 2 == 0) {
-			console.log(trackTurn);
 			this.value = 'X';
-			console.log(this.value);
-			checkWinner(playerX);
+			if(checkWinner(playerX)) {
+				showDialog(playerX);
+			}
 		} else {
-			console.log(trackTurn);
 			this.value = 'O';
-			console.log(this.value);
-			checkWinner(playerY);
+			if(checkWinner(playerO)) {
+				showDialog(playerO);
+			}
 		}
 		trackTurn++;
 	});
@@ -39,49 +38,72 @@ var bottomRight = document.getElementById('bottomRight');
 
 function checkWinner(player) {
 
+	var data = false;
+
 	// Check top row
 	if(topLeft.value == player && topCenter.value == player && topRight.value == player) {
-		alert(player + " wins!");
-		window.location.reload('true');
+		gameOver();
 	}
 
 	// Check bottom row
 	if(bottomLeft.value == player && bottomCenter.value == player && bottomRight.value == player) {
-		alert(player + " wins!");
-		window.location.reload('true');
+		gameOver();
 	}
 
+	// Check middle row horizontal
 	if(middleLeft.value == player && middleCenter.value == player && middleRight.value == player) {
-		alert(player + " wins!");
-		window.location.reload('true');
+		gameOver();
 	}
 
+	// Check middle row vertical
 	if(topCenter.value == player && middleCenter.value == player && bottomCenter.value == player) {
-		alert(player + " wins!");
-		window.location.reload('true');
+		gameOver();
 	}
 
 	// Check right row
 	if(topRight.value == player && middleRight.value == player && bottomRight.value == player) {
-		alert(player + " wins!");
-		window.location.reload('true');
+		gameOver();
 	}
 
 	// Check left row
 	if (topLeft.value == player && middleLeft.value == player && bottomLeft.value == player) {
-		alert(player + " wins!");
-		window.location.reload('true');
+		gameOver();
 	}
 
 	// Check diagonal from left to right 
 	if (topLeft.value == player && middleCenter.value == player && bottomRight.value == player) {
-		alert(player + " wins!");
-		window.location.reload('true');
+		gameOver();
 	}
 
 	// Check diagonal from right to left 
 	if (topRight.value == player && middleCenter.value == player && bottomLeft.value == player) {
-		alert(player + " wins!");
-		window.location.reload('true');
+		gameOver();
 	}
+	
+	if(trackTurn > 7) {
+		var catsGame = topLeft.value !== '' && topCenter.value !== '' && topRight.value !== '' && middleLeft.value !== '' && middleCenter.value !== '' && middleRight.value !== '' && bottomLeft.value !== '' && bottomCenter.value !== '' && bottomRight.value !== '';
+		
+		if(!(data) && (catsGame)) {
+			alert('Cats Game!');
+			window.location.reload('true');
+		}
+	}
+
+	function gameOver() {
+		data = true;
+	}
+
+	return data;
+}
+
+function showDialog(player) {
+	$.ajax({
+		url: "dialog.html"
+	}).done(function(response) {
+		$('body').append(response);
+		$('.dialogHeader').append(player + " wins!")
+		$('.dialogBtn').on('click', function() {
+			window.location.reload('true');
+		});
+	});
 }

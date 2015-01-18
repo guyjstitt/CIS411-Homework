@@ -1,3 +1,33 @@
+/* Global CSS */
+
+.col-4 {
+	width: 33.33333333%;
+}
+
+.col-6 {
+	width: 50%;
+}
+.col-8 {
+	width: 66.66666666%;
+}
+
+.inline {
+	display: inline-block;
+}
+
+.error {
+	display: block;
+	color: red;
+}
+
+.col-4 > label:after {
+	content: "*";
+	color: red;
+}
+
+/* Index CSS */
+
+
 .menu {
 	margin: 0 auto;
 	text-align: center;
@@ -14,13 +44,18 @@ ul.menuItems {
 }
 
 .container {
-	margin: 0 auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -300px;
+	margin-top: -300px;
 	width: 600px;
 	height: 600px;
+	border: 1px solid black;
 }
 
-.col-4 {
-	width: 33%;
+.container .col-4 {
+	width: 33.33333333%;
 	float: left;
 	box-sizing: border-box;
 }
@@ -29,9 +64,84 @@ ul.menuItems {
 	height: 200px;
 	width: 100%;
 	border: 1px solid black;
-}
-
-input[type='text'] {
 	font-size: 10em;
 	text-align: center;
 }
+
+/* Contact Form CSS */
+
+.contactContainer {
+	margin: 0 auto;
+}
+
+.contactContainer .row {
+	margin: 10px;
+}
+
+/* Registration Form CSS */
+
+.registrationContainer {
+	margin: 0 auto;
+}
+
+.registrationContainer .row {
+	margin: 10px;
+}
+
+.registrationContainer #skills {
+	display: block;
+}
+
+/* Faq CSS */
+
+.even {
+	background-color: lightgray !important;
+}
+
+
+.faqContainer {
+	width: 600px;
+	margin: 0 auto;
+	border: 1px solid black;
+}
+
+.faqContainer label, #faqTable_info {
+	color: white;
+}
+
+.DataTables_sort_wrapper {
+	color: black;
+}
+
+#faqTable_previous, #faqTable_next {
+	margin-right: 5px;
+}
+/* Dialog CSS */
+
+#dialog {
+	display: block;
+	position: absolute;
+	width: 500px;
+	height: 500px;
+	top: 50%;
+	left: 50%;
+	margin-left: -250px;
+	margin-top: -250px;
+	background-color: white;
+	border: 1px solid red;
+}
+
+#dialog h1 {
+	text-align: center;
+}
+
+#dialog .dialogBtn {
+	position: absolute;
+	width: 150px;
+	height: 70px;
+	left: 50%;
+	top: 50%;
+	margin-top: -35px;
+	margin-left: -75px;
+}
+

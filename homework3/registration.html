@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+	<body>
+		<div class="menu">
+			<ul class="menuItems">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="registration.html">Registration</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="faq.html">FAQ</a></li>
+			</ul>
+		</div>
+		<div class="registrationContainer col-4">
+			<form id="registrationForm">
+				<div class="row">
+					<div class='col-4 inline'>
+						<label for="fname">First Name</label>
+						<input id="fname" class="registrationInput" type="text" name="fname" required>
+					</div> 
+					<div class='col-4 inline'>
+						<label for="lname">Last Name</label>
+						<input id="lname" class="registrationInput" type="text" name="lname" required>
+					</div> 
+				</div>
+				<div class="row">
+					<div class='col-4 inline'>
+						<label for="name">URL</label>
+						<input id="url" class="registrationInput" type="url" name="url" required>
+					</div> 
+					<div class='col-4 inline'>
+						<label for="email">Email</label>
+						<input id="email" class="registrationInput" type="email" name="email" required>
+					</div>
+				</div>
+				<div class="row">
+					<div class='col-4'>
+						<label for="skills">Skills</label>
+						<textarea id="skills" class="registrationInput" name="skills" cols='100%' rows='10' required></textarea>
+					</div>
+				</div>
+				<div class="row"><input type="submit" value="Submit"></div>
+			</form>
+		</div>
+		<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="jquery.validate.js"></script>
+		<script type="text/javascript" src="registration.js"></script>
+	</body>
+</html>

@@ -1,3 +1,5 @@
 $(document).ready(function() {
-	$('#faqTable').DataTable();
+	$('#faqTable').DataTable({
+		"pagingType": "simple"
+	});
 });
